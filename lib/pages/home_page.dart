@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
 
   int indexBottomNav = 0;
 
@@ -19,14 +19,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'PageViewer and Tabs',
+        title: const Text(
+          'PageViewer and Nav Bar',
         ),
         centerTitle: true,
       ),
       body: PageView(
         controller: _pageController,
-        children: [
+        children: const [
           FirstPage(),
           SecondPage(),
           ThirdPage(),
@@ -39,9 +39,9 @@ class _HomePageState extends State<HomePage> {
             indexBottomNav = page;
           });
           _pageController.animateToPage(page,
-              duration: Duration(milliseconds: 300), curve: Curves.ease);
+              duration: const Duration(milliseconds: 300), curve: Curves.ease);
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

@@ -8,14 +8,13 @@ class SecondPage extends StatelessWidget {
     return Container(
       height: 200,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(color: Colors.red),
-      child: Container(
-          child: Center(
+      decoration: const BoxDecoration(color: Colors.red),
+      child: const Center(
         child: Text(
-          'Second Page',
-          style: TextStyle(fontSize: 16.0, color: Colors.white),
+      'Second Page',
+      style: TextStyle(fontSize: 16.0, color: Colors.white),
         ),
-      )),
+      ),
     );
   }
 }
